@@ -118,31 +118,32 @@ class accountsController extends http\controller
         //after you login you can use the header function to forward the user to a page that displays their tasks.
         //        $record = accounts::findUser($_POST['email']);
 
-        $user = accounts::findUserbyEmail($_REQUEST['email']);
-
-
-        if ($user == FALSE) {
-            echo 'user not found';
+        $record = new account();
+        $record = accounts::findUserbyUsername($_POST['login']);
+        //$checkpsw = accounts::checkPassword($_POST['psw'],$record->password);
+        //print_r($record);
+        //echo '1';
+        if ($record == FALSE) {
+            //header('Location: index.php');
+            print_r("<h1>' User not found!'</h1>");
         } else {
-
-            if($user->checkPassword($_POST['password']) == TRUE) {
-
-                echo 'login';
-
+            if($record->checkPassword($_POST['psw']) == TRUE) {
+                //echo 'login';
                 session_start();
-                $_SESSION["userID"] = $user->id;
-
-                //forward the user to the show all todos page
+                $_SESSION["userID"] = $record->id;
+                $_SESSION["userEmail"] = $record->email;
                 print_r($_SESSION);
+                header('Location: index.php?page=tasks&action=allOneUser&id='.$record->id);
             } else {
-                echo 'password does not match';
+                //header('Location: index.php');
+                print_r("<h1>'Sorry! You have entered wrong password....!'</h1>");
             }
-
         }
-
-
-
-
     }
-
+    public static function logout()
+    {
+        session_destroy();
+        header('Location: index.php');
+    }
 }
+?>
