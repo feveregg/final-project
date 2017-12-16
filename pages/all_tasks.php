@@ -77,18 +77,19 @@ print utility\htmlTable::genarateTableFromMultiArray($data);
       </div>
     </div>
 
+
+
     
-    <!-- Javascript files-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="js/charts-home.js"></script>
-    <script src="js/front.js"></script>
-  </body>
-</html>
+<form action="index.php?page=tasks&action=insert" method="post">
+
+    Owneremail: <tab><input type="email" name="owneremail"></tab><br><br>
+    Ownerid:    <tab><input type="number" name="ownerid"></tab><br><br>
+    Createdate: <tab><input type="text" name="createddate"></tab><br><br>
+    Duedate:    <tab><input type="text" name="duedate"></tab><br><br>
+    Message:    <tab><input type="text" name="message"></tab><br><br>
+    Isdone:     <tab><input type="text" name="isdone"></tab><br><br>
+    <input type="submit" value="Insert Task">
+</form>
 
 
 
