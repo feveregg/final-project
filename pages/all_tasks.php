@@ -25,57 +25,15 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body>
-    <div class="page home-page">
-     
-    
-            <div class="title">
-              <h1 class="h4">Final Project</h1>
-              
-            </div>
-          </div>
-          <!-- Sidebar Navidation Menus-->
-          <span class="heading">Main</span>
-          <div>
-           <ul class="list-unstyled">
-            <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
-            <button class="btn btn-link navbar-btn" class="icon-interface-windows" type="submit"></i>Creat Todo</button>
-            </form></ul>
-          </div>
 
-       <br/>
-              <ul id="dashvariants" class="collapse list-unstyled">
-                <li><a href="https://web.njit.edu/~wk45/homework6/">Data Output</a></li>
-                
-              </ul>
-            </li>
-            
-           
-        </nav>
-        <div class="content-inner">
-          <!-- Page Header-->
-          <header class="page-header">
-            <div class="container-fluid">
-              <h2 class="no-margin-bottom">Main</h2>
-            </div>
-          </header>
-          <!-- Dashboard Counts Section-->
-                         
-          <!-- Dashboard Header Section    -->
-          <section class="dashboard-header">
-            <div class="container-fluid">
-              <div class="row">
-                         
-         <?php
-print utility\htmlTable::genarateTableFromMultiArray($data);
-?>
-                     
-                
-          <!-- Page Footer-->
-          
-        </div>
-      </div>
-    </div>
+
+  
+ <style>
+    tab{
+        float: right;
+        margin-right: 63.0em;
+    }
+</style>
 
 
 
