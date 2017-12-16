@@ -19,40 +19,23 @@
 </head>
 
 
-      <div class="page-content d-flex align-items-stretch">
-        <!-- Side Navbar -->
-        <nav class="side-navbar">
-         
-          <!-- Sidebar Navidation Menus-->
-          <span class="heading">ain</span>
-          <div>
-           <ul class="list-unstyled">
-            <form action="index.php?page=tasks&action=create" method="POST" style="float:left;">
-            <button class="btn btn-link navbar-btn" class="icon-interface-windows" type="submit"></i>Create Task</button>
-            </form></ul>
-          </div>
+     <body>
+<h1>All Accounts</h1>
 
-          
-           
-        </nav>
-        <div class="content-inner">
-          <!-- Page Header-->
-          <header class="page-header">
-            <div class="container-fluid">
-              <h2 class="no-margin-bottom">Dashboard</h2>
-            </div>
-          </header>
-          <!-- Dashboard Counts Section-->
-                         
-          <!-- Dashboard Header Section    -->
-          <section class="dashboard-header">
-            <div class="container-fluid">
-              <div class="row">
-                         
-         <?php
+<h1> HI</h1>
+
+<?php
+//this is how you print something
+
 print utility\htmlTable::genarateTableFromMultiArray($data);
+
+
 ?>
-                     
+
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
                 
          
     <!-- Javascript files-->
