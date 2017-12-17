@@ -20,38 +20,30 @@
 <?php
 //this is how you print something
 
-print utility\htmlTable::genarateTableFromMultiArray($data);
+//print($data);
+print_r(utility\htmlTable::genarateTableFromMultiArray($data));
 
 
 ?>
 
 <br>
 <br>
-
-
-
- <style>
+<style>
     tab{
         float: right;
         margin-right: 63.0em;
     }
 </style>
+<form action="index.php?page=tasks&action=insertTodo" method="post">
 
-
-
-    
-<form action="index.php?page=tasks&action=insert" method="post">
-
-    Owneremail: <tab><input type="email" name="Email"></tab><br><br>
-    Ownerid:    <tab><input type="number" name="ID"></tab><br><br>
-    Createdate: <tab><input type="text" name="create time"></tab><br><br>
-    Duedate:    <tab><input type="text" name="due"></tab><br><br>
-    Message:    <tab><input type="text" name="content"></tab><br><br>
+    Owneremail: <tab><input type="email" name="owneremail"></tab><br><br>
+    Ownerid:    <tab><input type="number" name="ownerid"></tab><br><br>
+    Createdate: <tab><input type="text" name="createddate"></tab><br><br>
+    Duedate:    <tab><input type="text" name="duedate"></tab><br><br>
+    Message:    <tab><input type="text" name="message"></tab><br><br>
     Isdone:     <tab><input type="text" name="isdone"></tab><br><br>
-    <input type="submit" value="Insert">
+    <input type="submit" value="Insert Task">
 </form>
-
-
 
 <script src="js/scripts.js"></script>
 </body>
